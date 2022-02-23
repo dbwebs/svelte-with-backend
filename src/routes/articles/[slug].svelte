@@ -45,10 +45,6 @@
     export let article
   </script>
 
-  <svelte:head>
-    <title>{article.title}</title>
-  </svelte:head>
-
 <section id="health-article">
 	<img class="mw-100" src={article.coverPic.url} alt="Vegetables and fruits" />
 	<div class="p-5">
