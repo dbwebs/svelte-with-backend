@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
 	import HeroSection from '$lib/sections/hero/HeroSection.svelte';
 	import WelcomeSection from '$lib/sections/welcome/Welcome.svelte';
+	import Posts from './post/index.svelte';
 
 </script>
 
@@ -12,4 +13,5 @@
 <section id="home" class="otherpage">
 	<HeroSection />
 	<WelcomeSection />
+	
 </section>

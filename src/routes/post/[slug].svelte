@@ -11,18 +11,9 @@
     )
 
     const query = gql`
-      query singlePost($slug: String!) {
-        post(where: { slug: $slug }) {
+      query singleProject($slug: String!) {
+        project(where: { slug: $slug }) {
           title
-          date
-          content {
-            html
-          }
-          tags
-          author {
-            id
-            name
-          }
         }
       }
     `
@@ -31,26 +22,22 @@
       slug: context.params.slug,
     }
 
-    const { post } = await graphcms.request(query, variables)
+    const { project } = await graphcms.request(query, variables)
 
     return {
       props: {
-        post,
+        project,
       },
     }
   }
 </script>
 
 <script>
-  export let post
+  export let project
 </script>
 
 <svelte:head>
-  <title>{post.title}</title>
+  <title>{project.title}</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
-<p>{post.author.name}</p>
-<p>{post.date}</p>
-<p>{post.tags}</p>
-{@html post.content.html}
+<h1>{project.title}</h1>
