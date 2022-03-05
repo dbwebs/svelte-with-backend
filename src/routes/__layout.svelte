@@ -4,14 +4,18 @@
 </script>
 
 <script lang="ts">
+	import { navigating } from "$app/stores";
+
 	import PageTransition from '$lib/components/PageTransition.svelte';
 
 	import Header from '$lib/sections/header/Header.svelte';
 	import Footer from '$lib/sections/footer/Footer.svelte';
+	import Loading from '$lib/components/loading.svelte';
 	//import { Styles } from 'sveltestrap';
 	import css from '$lib/css/main.css';
 
-	export let url;
+	export let url;  
+	
 </script>
 
 <svelte:head>
@@ -29,12 +33,18 @@
 	<link rel="stylesheet" type="text/css" href={css} />
 </svelte:head>
 
-<Header />
 
+
+
+
+<Header />
+{#if $navigating !== null}
+	<Loading />
+{/if}
 <PageTransition {url}>
-	<main>
-		<slot />
-	</main>
+	<slot />
+	<script>console.log(navigating)</script>
+	<Footer />
 </PageTransition>
 
-<Footer />
+

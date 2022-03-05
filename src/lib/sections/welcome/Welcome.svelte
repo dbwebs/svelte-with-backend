@@ -40,7 +40,7 @@
 	</div>
 	<div class="row">
 		{#each welcomeCards as item}
-			<div class="col-md-4 py-3 mw-600">
+			<div class="col-md-4 py-3 mw-600 mx-auto">
 				<div class="card">
 					<img class="card-img-top" src={item.src} alt={item.heading} />
 					<div class="card-body">

@@ -44,6 +44,7 @@
 					</div>
 				{/each}
 			</div>
+			<p class="text-light text-align-center">©COPYRIGHT DAIBIN WEBSITES 2022</p>
 		</div>
 	</div>
 </footer>

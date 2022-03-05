@@ -10,6 +10,7 @@
 
 	// Show mobile icon and display menu
 	let showMobileMenu = false;
+	let loading = false;
 
 	// List of navigation items
 	const navItems = [
@@ -41,6 +42,9 @@
 
 		mediaListener.addListener(mediaQueryHandler);
 	});
+
+	
+	
 </script>
 
 <header class="none">

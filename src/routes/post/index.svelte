@@ -1,6 +1,8 @@
 <script context="module">
     import { gql, GraphQLClient } from 'graphql-request'
   
+    export let amt = '';
+
     export async function load() {
       const graphcms = new GraphQLClient(
         import.meta.env.VITE_GRAPHCMS_URL,
@@ -8,10 +10,12 @@
           headers: {},
         }
       )
+
   
       const query = gql`
         query listPosts {
-          posts {
+          posts 
+          {
             id
             title
             slug

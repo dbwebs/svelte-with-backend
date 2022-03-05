@@ -1,13 +1,12 @@
 <!-- PageTransition.svelte -->
 <script>
-    import { fly } from "svelte/transition";
-    export let url = "";
-    const pageTransitionDuration = 500;
-  </script>
-  
-  {#key url}
-    <div in:fly={{  x:-5, duration: pageTransitionDuration, delay: pageTransitionDuration }}
-         out:fly={{ x: 5, duration: pageTransitionDuration }}>
-      <slot />
-    </div>
-  {/key}
+	import { fly, scale } from 'svelte/transition';
+	export let url = '';
+	const pageTransitionDuration = 500;
+</script>
+
+{#key url}
+	<main in:fly={{ duration: pageTransitionDuration, delay: pageTransitionDuration }} out:fly>
+		<slot />
+	</main>
+{/key}

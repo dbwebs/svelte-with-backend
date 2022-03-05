@@ -13,7 +13,7 @@
     query projectquery {
 		projectLists {
             title
-			projects {
+			projects{
 				title
 				slug
 				description
@@ -58,7 +58,7 @@
 								{p.description}
 							</p>
 							{#if p.slug !== null}
-								<a href={p.slug} class="btn btn-primary">Learn more</a>
+								<a href="/projects/{p.slug}" class="btn btn-primary">Learn more</a>
 							{/if}
 						</div>
 					</div>
