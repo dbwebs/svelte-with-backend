@@ -19,8 +19,7 @@
 		{ label: 'Contacts', href: '/contacts' },
 		{ label: 'Articles', href: '/articles' },
 		{ label: 'Projects', href: '/projects' },
-		{ label: 'Jason Scott Lee', href: '/jason-scott-lee' },
-		{ label: 'Posts', href: '/post' }
+		{ label: 'Jason Scott Lee', href: '/jason-scott-lee' }
 	];
 
 	// Mobile menu click event handler
@@ -42,9 +41,6 @@
 
 		mediaListener.addListener(mediaQueryHandler);
 	});
-
-	
-	
 </script>
 
 <header class="none">
